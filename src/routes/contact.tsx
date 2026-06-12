@@ -1,20 +1,9 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { Phone, MapPin, Clock, Send, CheckCircle2 } from "lucide-react";
 import { SITE, SERVICES } from "@/lib/site";
 import { Reveal } from "@/components/reveal";
 
-export const Route = createFileRoute("/contact")({
-  head: () => ({
-    meta: [
-      { title: "Contact | Free Estimate — Blazin Property Solutions Wichita KS" },
-      { name: "description", content: "Request a free property services estimate in Wichita & Butler County, KS. Call 316-500-0152 or send a message — we respond fast." },
-    ],
-  }),
-  component: Contact,
-});
-
-function Contact() {
+export default function Contact() {
   const [sent, setSent] = useState(false);
   return (
     <div className="px-4 sm:px-6 lg:px-8 py-20 overflow-hidden">

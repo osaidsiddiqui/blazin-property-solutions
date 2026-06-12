@@ -1,17 +1,7 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import { Flame } from "lucide-react";
 import { IMG, SITE } from "@/lib/site";
 import { Reveal, RevealGroup, RevealItem } from "@/components/reveal";
-
-export const Route = createFileRoute("/about")({
-  head: () => ({
-    meta: [
-      { title: "About Blazin Property Solutions | Wichita & Butler County KS" },
-      { name: "description", content: "Locally owned Kansas LLC delivering fast, clean, dependable property services across Wichita and Butler County." },
-    ],
-  }),
-  component: About,
-});
 
 const TIMELINE = [
   ["Founded", "Blazin Property Solutions launches as a local LLC in Kansas."],
@@ -27,7 +17,7 @@ const VALUES = [
   ["Local", "Kansas owned. Kansas operated."],
 ];
 
-function About() {
+export default function About() {
   return (
     <div className="px-4 sm:px-6 lg:px-8 py-20 overflow-hidden">
       <div className="mx-auto max-w-7xl">

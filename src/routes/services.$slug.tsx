@@ -1,31 +1,8 @@
-import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { Link, useParams } from "react-router-dom";
 import { ArrowRight, Check, Phone } from "lucide-react";
 import { SERVICES, SITE, IMG } from "@/lib/site";
 import { Reveal, RevealGroup, RevealItem } from "@/components/reveal";
-
-export const Route = createFileRoute("/services/$slug")({
-  loader: ({ params }) => {
-    const service = SERVICES.find((s) => s.slug === params.slug);
-    if (!service) throw notFound();
-    return { service };
-  },
-  head: ({ loaderData }) => ({
-    meta: loaderData
-      ? [
-          { title: `${loaderData.service.title} Wichita KS | Blazin Property Solutions` },
-          { name: "description", content: `${loaderData.service.title} in Wichita & Butler County, KS. ${loaderData.service.desc} Call ${SITE.phone}.` },
-        ]
-      : [],
-  }),
-  notFoundComponent: () => (
-    <div className="px-4 py-32 text-center">
-      <h1 className="font-display text-4xl">Service not found</h1>
-      <Link to="/services" className="text-primary mt-4 inline-block">Back to services</Link>
-    </div>
-  ),
-  errorComponent: ({ error }) => <div className="px-4 py-32 text-center text-muted-foreground">{error.message}</div>,
-  component: ServiceDetail,
-});
+import NotFound from "./not-found";
 
 const HERO_IMAGES: Record<string, string> = {
   "junk-removal": IMG.dumpLoad,
@@ -36,8 +13,10 @@ const HERO_IMAGES: Record<string, string> = {
   "general-solutions": IMG.truckTrailer,
 };
 
-function ServiceDetail() {
-  const { service } = Route.useLoaderData();
+export default function ServiceDetail() {
+  const { slug } = useParams<{ slug: string }>();
+  const service = SERVICES.find((s) => s.slug === slug);
+  if (!service) return <NotFound />;
   const hero = HERO_IMAGES[service.slug] ?? IMG.truckTrailer;
 
   return (

@@ -1,15 +1,3 @@
-import logo from "@/assets/logo.png.asset.json";
-import truckTrailer from "@/assets/truck-trailer.jpg.asset.json";
-import dumpLoad from "@/assets/dump-load.jpg.asset.json";
-import trailerAlley from "@/assets/trailer-alley.jpg.asset.json";
-import yardCleanup from "@/assets/yard-cleanup.jpg.asset.json";
-import svcJunk from "@/assets/svc-junk.jpg.asset.json";
-import svcTree from "@/assets/svc-tree.jpg.asset.json";
-import svcFence from "@/assets/svc-fence.jpg.asset.json";
-import svcDemo from "@/assets/svc-demo.jpg.asset.json";
-import svcPm from "@/assets/svc-pm.jpg.asset.json";
-import svcGeneral from "@/assets/svc-general.jpg.asset.json";
-
 export const SITE = {
   name: "Blazin Property Solutions",
   short: "BPS",
@@ -21,36 +9,40 @@ export const SITE = {
 };
 
 export const IMG = {
-  logo: logo.url,
-  truckTrailer: truckTrailer.url,
-  dumpLoad: dumpLoad.url,
-  trailerAlley: trailerAlley.url,
-  yardCleanup: yardCleanup.url,
-  svcJunk: svcJunk.url,
-  svcTree: svcTree.url,
-  svcFence: svcFence.url,
-  svcDemo: svcDemo.url,
-  svcPm: svcPm.url,
-  svcGeneral: svcGeneral.url,
+  logo: "/assets/logo.png",
+  truckTrailer: "/assets/truck-trailer.jpg",
+  dumpLoad: "/assets/dump-load.jpg",
+  trailerAlley: "/assets/trailer-alley.jpg",
+  yardCleanup: "/assets/yard-cleanup.jpg",
+  svcJunk: "/assets/svc-junk.jpg",
+  svcTree: "/assets/svc-tree.jpg",
+  svcFence: "/assets/svc-fence.jpg",
+  svcDemo: "/assets/svc-demo.jpg",
+  svcPm: "/assets/svc-pm.jpg",
+  svcGeneral: "/assets/svc-general.jpg",
+  galleryTruckRoad: "/assets/gallery-truck-road.jpg",
+  galleryHouseDebris: "/assets/gallery-house-debris.jpg",
+  galleryShopHaul: "/assets/gallery-shop-haul.jpg",
+  galleryFenceRepair: "/assets/gallery-fence-repair.jpg",
 };
 
 export const SERVICES = [
-  { slug: "junk-removal", title: "Junk Removal", short: "Residential and commercial cleanouts.", image: svcJunk.url,
+  { slug: "junk-removal", title: "Junk Removal", short: "Residential and commercial cleanouts.", image: IMG.svcJunk,
     desc: "Full-service junk hauling for homes, businesses, and construction sites across Wichita and Butler County. We load, haul, and dispose responsibly.",
     benefits: ["Same-day & next-day service", "Full-truck or partial loads", "Eco-friendly disposal", "We do the heavy lifting"] },
-  { slug: "tree-trimming", title: "Tree Trimming", short: "Safe and professional tree maintenance.", image: svcTree.url,
+  { slug: "tree-trimming", title: "Tree Trimming", short: "Safe and professional tree maintenance.", image: IMG.svcTree,
     desc: "Professional trimming, limb removal, and storm cleanup. Keep your property safe and your trees healthy year-round.",
     benefits: ["Storm damage cleanup", "Limb & branch removal", "Lot clearing", "Full debris haul-off"] },
-  { slug: "fencing", title: "Fencing", short: "Fence installation and repair solutions.", image: svcFence.url,
+  { slug: "fencing", title: "Fencing", short: "Fence installation and repair solutions.", image: IMG.svcFence,
     desc: "New fence installation and repair — wood, chain link, and privacy fencing built to last Kansas weather.",
     benefits: ["New installs & repairs", "Wood, chain link, privacy", "Free on-site estimates", "Built to code"] },
-  { slug: "demolition", title: "Demolition", short: "Efficient structure removal and cleanup.", image: svcDemo.url,
+  { slug: "demolition", title: "Demolition", short: "Efficient structure removal and cleanup.", image: IMG.svcDemo,
     desc: "Sheds, garages, outbuildings, decks, and interior demo. We tear it down and haul it off in one trip.",
     benefits: ["Structures & outbuildings", "Interior demo", "Site cleanup included", "Permit-aware crew"] },
-  { slug: "property-management", title: "Property Management", short: "Reliable property maintenance services.", image: svcPm.url,
+  { slug: "property-management", title: "Property Management", short: "Reliable property maintenance services.", image: IMG.svcPm,
     desc: "Ongoing maintenance for landlords, investors, and absentee owners — one call handles it all.",
     benefits: ["Turn-over cleanouts", "Lawn & exterior upkeep", "Repair coordination", "Reliable monthly service"] },
-  { slug: "general-solutions", title: "General Property Maintenance", short: "Custom property improvement projects.", image: svcGeneral.url,
+  { slug: "general-solutions", title: "General Property Maintenance", short: "Custom property improvement projects.", image: IMG.svcGeneral,
     desc: "Odd jobs, hauling, light grading, and custom property work. If it needs doing, we'll get it done.",
     benefits: ["Custom scopes", "Hauling & disposal", "Light grading", "One-call convenience"] },
 ] as const;

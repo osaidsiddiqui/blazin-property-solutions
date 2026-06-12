@@ -1,25 +1,16 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { ArrowRight, Phone, Flame, MapPin, Clock, Building2, Zap } from "lucide-react";
 import { SITE, IMG, SERVICES, TESTIMONIALS } from "@/lib/site";
 import { Reveal, RevealGroup, RevealItem } from "@/components/reveal";
 
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Blazin Property Solutions | Junk Removal, Fencing, Demolition — Wichita KS" },
-      { name: "description", content: "Property services done right in Wichita & Butler County, KS. Junk removal, tree trimming, fencing, demolition & property management. Fast. Clean. Dependable." },
-    ],
-  }),
-  component: Home,
-});
-
-function Home() {
+export default function Home() {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
   const y = useTransform(scrollYProgress, [0, 1], [0, 150]);
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0.3]);
+  const heroY = useTransform(scrollYProgress, [0, 1], [0, -60]);
 
   return (
     <div className="overflow-hidden">
@@ -30,7 +21,7 @@ function Home() {
           <div className="absolute bottom-0 right-0 h-[28rem] w-[28rem] rounded-full bg-accent/15 blur-3xl" />
         </div>
         <div className="mx-auto max-w-7xl w-full grid lg:grid-cols-[1.1fr_1fr] gap-12 lg:gap-16 items-center py-20">
-          <motion.div style={{ y: useTransform(scrollYProgress, [0, 1], [0, -60]) }}>
+          <motion.div style={{ y: heroY }}>
             <motion.div
               initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.2 }}
               className="inline-flex items-center gap-2 rounded-full glass-card px-4 py-1.5 text-[10px] uppercase tracking-[0.3em] text-primary mb-8"
@@ -138,7 +129,7 @@ function Home() {
             <RevealGroup className="mt-8 flex flex-wrap gap-2">
               {SERVICES.map((s) => (
                 <RevealItem key={s.slug}>
-                  <Link to="/services/$slug" params={{ slug: s.slug }} className="inline-flex items-center rounded-full border border-border bg-card/50 px-4 py-2 text-xs uppercase tracking-widest hover:border-primary hover:text-primary transition-colors">
+                  <Link to={`/services/${s.slug}`} className="inline-flex items-center rounded-full border border-border bg-card/50 px-4 py-2 text-xs uppercase tracking-widest hover:border-primary hover:text-primary transition-colors">
                     {s.title}
                   </Link>
                 </RevealItem>
@@ -163,7 +154,7 @@ function Home() {
           <RevealGroup className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {SERVICES.map((s, i) => (
               <RevealItem key={s.slug}>
-                <Link to="/services/$slug" params={{ slug: s.slug }}
+                <Link to={`/services/${s.slug}`}
                   className="group relative block rounded-2xl h-80 overflow-hidden border border-border/60 hover:border-primary/60 transition-all hover:-translate-y-1">
                   <img src={s.image} alt={s.title} className="absolute inset-0 h-full w-full object-cover group-hover:scale-110 transition-transform duration-[1.4s]" />
                   <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/10" />

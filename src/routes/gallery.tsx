@@ -1,26 +1,11 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { IMG, SITE } from "@/lib/site";
 import { Reveal, RevealGroup, RevealItem } from "@/components/reveal";
-import galleryTruckRoad from "@/assets/gallery-truck-road.jpg.asset.json";
-import galleryHouseDebris from "@/assets/gallery-house-debris.jpg.asset.json";
-import galleryShopHaul from "@/assets/gallery-shop-haul.jpg.asset.json";
-import galleryFenceRepair from "@/assets/gallery-fence-repair.jpg.asset.json";
-
-export const Route = createFileRoute("/gallery")({
-  head: () => ({
-    meta: [
-      { title: "Project Gallery | Property Cleanup Wichita KS — BPS" },
-      { name: "description", content: "See recent property transformations from Blazin Property Solutions across Wichita & Butler County, KS." },
-    ],
-  }),
-  component: Gallery,
-});
 
 const PROJECTS = [
-  { img: galleryTruckRoad.url, title: "On-Route Haul Service", tag: "Hauling", h: "tall" },
-  { img: galleryHouseDebris.url, title: "Side-Yard Debris Cleanout", tag: "Junk Removal", h: "short" },
-  { img: galleryShopHaul.url, title: "Shop Lot Bulk Pickup", tag: "Property Mgmt", h: "tall" },
-  { img: galleryFenceRepair.url, title: "Privacy Fence Repair", tag: "Fencing", h: "short" },
+  { img: IMG.galleryTruckRoad, title: "On-Route Haul Service", tag: "Hauling", h: "tall" },
+  { img: IMG.galleryHouseDebris, title: "Side-Yard Debris Cleanout", tag: "Junk Removal", h: "short" },
+  { img: IMG.galleryShopHaul, title: "Shop Lot Bulk Pickup", tag: "Property Mgmt", h: "tall" },
+  { img: IMG.galleryFenceRepair, title: "Privacy Fence Repair", tag: "Fencing", h: "short" },
   { img: IMG.truckTrailer, title: "Equipment on Site", tag: "General", h: "tall" },
   { img: IMG.dumpLoad, title: "Full Junk Haul", tag: "Junk Removal", h: "short" },
   { img: IMG.trailerAlley, title: "Alley Access Cleanout", tag: "Hauling", h: "short" },

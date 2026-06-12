@@ -1,21 +1,11 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { MapPin, Clock, Phone } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Clock, Phone } from "lucide-react";
 import { SITE } from "@/lib/site";
 import { Reveal, RevealGroup, RevealItem } from "@/components/reveal";
 
-export const Route = createFileRoute("/service-area")({
-  head: () => ({
-    meta: [
-      { title: "Service Area | Wichita & Butler County KS — BPS" },
-      { name: "description", content: "Blazin Property Solutions serves Wichita, El Dorado, Augusta, Andover, Rose Hill, and all of Butler County, Kansas." },
-    ],
-  }),
-  component: ServiceArea,
-});
-
 const CITIES = ["Wichita", "El Dorado", "Augusta", "Andover", "Rose Hill", "Towanda", "Douglass", "Benton", "Leon", "Whitewater"];
 
-function ServiceArea() {
+export default function ServiceArea() {
   return (
     <div className="px-4 sm:px-6 lg:px-8 py-20 overflow-hidden">
       <div className="mx-auto max-w-7xl">
@@ -26,7 +16,6 @@ function ServiceArea() {
         </Reveal>
 
         <div className="grid lg:grid-cols-[1.3fr_1fr] gap-10 items-stretch">
-          {/* Live Google Map */}
           <Reveal>
             <div className="relative glass-card rounded-3xl p-3 h-full min-h-[500px] overflow-hidden">
               <div className="relative w-full h-full min-h-[480px] rounded-2xl overflow-hidden border border-border/60">

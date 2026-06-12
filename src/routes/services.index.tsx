@@ -1,19 +1,9 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { SERVICES } from "@/lib/site";
 import { Reveal, RevealGroup, RevealItem } from "@/components/reveal";
 
-export const Route = createFileRoute("/services/")({
-  head: () => ({
-    meta: [
-      { title: "Services | Junk Removal, Fencing, Demolition Wichita KS — BPS" },
-      { name: "description", content: "Full property services in Wichita & Butler County, KS: junk removal, tree trimming, fence installation, demolition, property management, and general property maintenance." },
-    ],
-  }),
-  component: ServicesPage,
-});
-
-function ServicesPage() {
+export default function ServicesIndex() {
   return (
     <div className="px-4 sm:px-6 lg:px-8 py-20">
       <div className="mx-auto max-w-7xl">
@@ -25,7 +15,7 @@ function ServicesPage() {
         <RevealGroup className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {SERVICES.map((s, i) => (
             <RevealItem key={s.slug}>
-              <Link to="/services/$slug" params={{ slug: s.slug }} className="group relative block rounded-2xl h-[26rem] overflow-hidden border border-border/60 hover:border-primary/60 hover:-translate-y-1 transition-all">
+              <Link to={`/services/${s.slug}`} className="group relative block rounded-2xl h-[26rem] overflow-hidden border border-border/60 hover:border-primary/60 hover:-translate-y-1 transition-all">
                 <img src={s.image} alt={s.title} className="absolute inset-0 h-full w-full object-cover group-hover:scale-110 transition-transform duration-[1.4s]" />
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/10" />
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/0 to-accent/0 group-hover:from-primary/25 group-hover:to-accent/25 transition-colors" />
