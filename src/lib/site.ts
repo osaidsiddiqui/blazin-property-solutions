@@ -3,6 +3,12 @@ import truckTrailer from "@/assets/truck-trailer.jpg.asset.json";
 import dumpLoad from "@/assets/dump-load.jpg.asset.json";
 import trailerAlley from "@/assets/trailer-alley.jpg.asset.json";
 import yardCleanup from "@/assets/yard-cleanup.jpg.asset.json";
+import svcJunk from "@/assets/svc-junk.jpg.asset.json";
+import svcTree from "@/assets/svc-tree.jpg.asset.json";
+import svcFence from "@/assets/svc-fence.jpg.asset.json";
+import svcDemo from "@/assets/svc-demo.jpg.asset.json";
+import svcPm from "@/assets/svc-pm.jpg.asset.json";
+import svcGeneral from "@/assets/svc-general.jpg.asset.json";
 
 export const SITE = {
   name: "Blazin Property Solutions",
@@ -20,25 +26,31 @@ export const IMG = {
   dumpLoad: dumpLoad.url,
   trailerAlley: trailerAlley.url,
   yardCleanup: yardCleanup.url,
+  svcJunk: svcJunk.url,
+  svcTree: svcTree.url,
+  svcFence: svcFence.url,
+  svcDemo: svcDemo.url,
+  svcPm: svcPm.url,
+  svcGeneral: svcGeneral.url,
 };
 
 export const SERVICES = [
-  { slug: "junk-removal", title: "Junk Removal", short: "Residential and commercial cleanouts.", icon: "Trash2",
+  { slug: "junk-removal", title: "Junk Removal", short: "Residential and commercial cleanouts.", image: svcJunk.url,
     desc: "Full-service junk hauling for homes, businesses, and construction sites across Wichita and Butler County. We load, haul, and dispose responsibly.",
     benefits: ["Same-day & next-day service", "Full-truck or partial loads", "Eco-friendly disposal", "We do the heavy lifting"] },
-  { slug: "tree-trimming", title: "Tree Trimming", short: "Safe and professional tree maintenance.", icon: "Trees",
+  { slug: "tree-trimming", title: "Tree Trimming", short: "Safe and professional tree maintenance.", image: svcTree.url,
     desc: "Professional trimming, limb removal, and storm cleanup. Keep your property safe and your trees healthy year-round.",
     benefits: ["Storm damage cleanup", "Limb & branch removal", "Lot clearing", "Full debris haul-off"] },
-  { slug: "fencing", title: "Fencing", short: "Fence installation and repair solutions.", icon: "Fence",
+  { slug: "fencing", title: "Fencing", short: "Fence installation and repair solutions.", image: svcFence.url,
     desc: "New fence installation and repair — wood, chain link, and privacy fencing built to last Kansas weather.",
     benefits: ["New installs & repairs", "Wood, chain link, privacy", "Free on-site estimates", "Built to code"] },
-  { slug: "demolition", title: "Demolition", short: "Efficient structure removal and cleanup.", icon: "Hammer",
+  { slug: "demolition", title: "Demolition", short: "Efficient structure removal and cleanup.", image: svcDemo.url,
     desc: "Sheds, garages, outbuildings, decks, and interior demo. We tear it down and haul it off in one trip.",
     benefits: ["Structures & outbuildings", "Interior demo", "Site cleanup included", "Permit-aware crew"] },
-  { slug: "property-management", title: "Property Management", short: "Reliable property maintenance services.", icon: "KeyRound",
+  { slug: "property-management", title: "Property Management", short: "Reliable property maintenance services.", image: svcPm.url,
     desc: "Ongoing maintenance for landlords, investors, and absentee owners — one call handles it all.",
     benefits: ["Turn-over cleanouts", "Lawn & exterior upkeep", "Repair coordination", "Reliable monthly service"] },
-  { slug: "general-solutions", title: "General Property Solutions", short: "Custom property improvement projects.", icon: "Wrench",
+  { slug: "general-solutions", title: "General Property Maintenance", short: "Custom property improvement projects.", image: svcGeneral.url,
     desc: "Odd jobs, hauling, light grading, and custom property work. If it needs doing, we'll get it done.",
     benefits: ["Custom scopes", "Hauling & disposal", "Light grading", "One-call convenience"] },
 ] as const;

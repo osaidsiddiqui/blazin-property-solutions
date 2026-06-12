@@ -1,11 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import { ArrowRight, Phone, Trash2, Trees, Hammer, KeyRound, Wrench, Flame, MapPin, Clock, Building2, Zap } from "lucide-react";
+import { ArrowRight, Phone, Flame, MapPin, Clock, Building2, Zap } from "lucide-react";
 import { SITE, IMG, SERVICES, TESTIMONIALS } from "@/lib/site";
 import { Reveal, RevealGroup, RevealItem } from "@/components/reveal";
-
-const ICONS = { Trash2, Trees, Hammer, KeyRound, Wrench, Fence: Hammer } as const;
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -163,26 +161,26 @@ function Home() {
             </Link>
           </Reveal>
           <RevealGroup className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {SERVICES.map((s, i) => {
-              const Icon = (ICONS as any)[s.icon] ?? Wrench;
-              return (
-                <RevealItem key={s.slug}>
-                  <Link to="/services/$slug" params={{ slug: s.slug }}
-                    className="group relative block glass-card rounded-2xl p-8 h-full overflow-hidden hover:border-primary/50 transition-all hover:-translate-y-1">
-                    <div className="absolute -top-20 -right-20 h-40 w-40 rounded-full bg-fire-gradient opacity-0 group-hover:opacity-20 blur-3xl transition-opacity" />
-                    <div className="text-xs text-muted-foreground font-mono mb-6">0{i + 1}</div>
-                    <div className="h-14 w-14 rounded-xl bg-fire-gradient/10 border border-primary/30 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                      <Icon className="h-7 w-7 text-primary" />
+            {SERVICES.map((s, i) => (
+              <RevealItem key={s.slug}>
+                <Link to="/services/$slug" params={{ slug: s.slug }}
+                  className="group relative block rounded-2xl h-80 overflow-hidden border border-border/60 hover:border-primary/60 transition-all hover:-translate-y-1">
+                  <img src={s.image} alt={s.title} className="absolute inset-0 h-full w-full object-cover group-hover:scale-110 transition-transform duration-[1.4s]" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/10" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/0 to-accent/0 group-hover:from-primary/25 group-hover:to-accent/25 transition-colors" />
+                  <div className="relative h-full p-7 flex flex-col justify-between">
+                    <div className="text-xs text-primary font-mono">0{i + 1}</div>
+                    <div>
+                      <h3 className="font-display text-3xl">{s.title}</h3>
+                      <p className="text-sm text-muted-foreground mt-2">{s.short}</p>
+                      <div className="mt-4 inline-flex items-center gap-2 text-xs uppercase tracking-widest text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+                        Explore <ArrowRight className="h-3 w-3" />
+                      </div>
                     </div>
-                    <h3 className="font-display text-2xl mb-3">{s.title}</h3>
-                    <p className="text-sm text-muted-foreground">{s.short}</p>
-                    <div className="mt-6 inline-flex items-center gap-2 text-xs uppercase tracking-widest text-primary opacity-0 group-hover:opacity-100 transition-opacity">
-                      Explore <ArrowRight className="h-3 w-3" />
-                    </div>
-                  </Link>
-                </RevealItem>
-              );
-            })}
+                  </div>
+                </Link>
+              </RevealItem>
+            ))}
           </RevealGroup>
         </div>
       </section>

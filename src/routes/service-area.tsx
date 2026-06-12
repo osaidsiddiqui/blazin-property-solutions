@@ -26,49 +26,21 @@ function ServiceArea() {
         </Reveal>
 
         <div className="grid lg:grid-cols-[1.3fr_1fr] gap-10 items-stretch">
-          {/* Stylized Kansas map */}
+          {/* Live Google Map */}
           <Reveal>
-            <div className="relative glass-card rounded-3xl p-8 h-full min-h-[500px] overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/5" />
-              <svg viewBox="0 0 400 250" className="relative w-full h-auto">
-                <defs>
-                  <linearGradient id="ks" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0%" stopColor="oklch(0.3 0.04 35)" />
-                    <stop offset="100%" stopColor="oklch(0.2 0.02 30)" />
-                  </linearGradient>
-                  <radialGradient id="pulse">
-                    <stop offset="0%" stopColor="oklch(0.78 0.21 50)" stopOpacity="1" />
-                    <stop offset="100%" stopColor="oklch(0.78 0.21 50)" stopOpacity="0" />
-                  </radialGradient>
-                </defs>
-                {/* Kansas rectangle-ish outline */}
-                <path d="M30 60 L370 60 L370 180 L260 180 L260 200 L30 200 Z"
-                  fill="url(#ks)" stroke="oklch(0.5 0.1 40)" strokeWidth="1.5" />
-                {/* Wichita */}
-                <circle cx="220" cy="160" r="30" fill="url(#pulse)">
-                  <animate attributeName="r" values="20;40;20" dur="3s" repeatCount="indefinite" />
-                </circle>
-                <circle cx="220" cy="160" r="6" fill="oklch(0.78 0.22 55)" />
-                <text x="232" y="158" fill="white" fontSize="11" fontFamily="Oswald" letterSpacing="1">WICHITA</text>
-                {/* Butler County */}
-                <circle cx="265" cy="155" r="25" fill="url(#pulse)">
-                  <animate attributeName="r" values="18;36;18" dur="3.5s" repeatCount="indefinite" />
-                </circle>
-                <circle cx="265" cy="155" r="5" fill="oklch(0.62 0.24 28)" />
-                <text x="278" y="170" fill="white" fontSize="10" fontFamily="Oswald" letterSpacing="1">BUTLER CO.</text>
-                <text x="30" y="40" fill="oklch(0.6 0.05 60)" fontSize="9" letterSpacing="3">KANSAS</text>
-              </svg>
-              <div className="mt-6 grid grid-cols-2 gap-4">
-                <div className="glass-card rounded-xl p-4">
-                  <MapPin className="h-5 w-5 text-primary" />
-                  <div className="font-display text-xl mt-2">Wichita, KS</div>
-                  <div className="text-xs text-muted-foreground mt-1">Sedgwick County</div>
-                </div>
-                <div className="glass-card rounded-xl p-4">
-                  <MapPin className="h-5 w-5 text-primary" />
-                  <div className="font-display text-xl mt-2">Butler County</div>
-                  <div className="text-xs text-muted-foreground mt-1">El Dorado, Augusta+</div>
-                </div>
+            <div className="relative glass-card rounded-3xl p-3 h-full min-h-[500px] overflow-hidden">
+              <div className="relative w-full h-full min-h-[480px] rounded-2xl overflow-hidden border border-border/60">
+                <iframe
+                  title="Blazin Property Solutions Service Area — Wichita & Butler County, KS"
+                  src="https://www.google.com/maps?q=Butler+County,+Kansas&z=9&output=embed"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="absolute inset-0 w-full h-full grayscale-[0.3] contrast-110 invert-[0.92] hue-rotate-180"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-primary/10 via-transparent to-accent/10 mix-blend-overlay" />
+                <div className="pointer-events-none absolute top-4 left-4 glass-card rounded-full px-3 py-1.5 text-[10px] uppercase tracking-[0.3em] text-primary">Live Coverage Map</div>
               </div>
             </div>
           </Reveal>
