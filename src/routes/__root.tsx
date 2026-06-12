@@ -11,6 +11,8 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { Header, Footer, FloatingActions } from "@/components/site-chrome";
+import { Preloader } from "@/components/preloader";
 
 function NotFoundComponent() {
   return (
