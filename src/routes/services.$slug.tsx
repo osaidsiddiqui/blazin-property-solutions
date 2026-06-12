@@ -67,7 +67,7 @@ function ServiceDetail() {
           <Reveal>
             <h2 className="font-display text-4xl sm:text-5xl">WHAT YOU <span className="text-fire-gradient">GET</span></h2>
             <ul className="mt-8 space-y-4">
-              {service.benefits.map((b) => (
+              {service.benefits.map((b: string) => (
                 <li key={b} className="flex gap-4 items-start glass-card rounded-xl p-4">
                   <div className="h-8 w-8 shrink-0 rounded-lg bg-fire-gradient/10 border border-primary/30 grid place-items-center"><Check className="h-4 w-4 text-primary"/></div>
                   <span className="text-foreground">{b}</span>
