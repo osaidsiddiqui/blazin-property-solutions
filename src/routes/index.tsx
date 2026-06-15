@@ -90,7 +90,7 @@ export default function Home() {
         <RevealGroup className="mx-auto max-w-7xl grid grid-cols-2 md:grid-cols-4 gap-8">
           {[
             { icon: Zap, label: "Fast Response", value: "24/7" },
-            { icon: MapPin, label: "Serving Butler/Surrounding", value: "AREAS" },
+            { icon: MapPin, label: "Serving Butler County", value: "AREAS" },
             { icon: Clock, label: "Always Open", value: "365" },
             { icon: Building2, label: "Res & Commercial", value: "BOTH" },
           ].map(({ icon: Icon, label, value }) => (
