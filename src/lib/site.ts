@@ -45,7 +45,7 @@ export const SERVICES = [
   { slug: "property-management", title: "Property Management", short: "Reliable property maintenance services.", image: IMG.svcPm,
     desc: "Ongoing maintenance for landlords, investors, and absentee owners — one call handles it all.",
     benefits: ["Turn-over cleanouts", "Lawn & exterior upkeep", "Repair coordination", "Reliable monthly service"] },
-  { slug: "landscaping-mowing", title: "Landscaping & Mowing", short: "Residential and commercial lawn maintenance.", image: IMG.svcGeneral,
+  { slug: "landscaping-mowing", title: "Landscaping & Mowing", short: "Residential and commercial lawn maintenance.", image: IMG.svcPm,
     desc: "Professional landscaping and mowing services for residential and commercial properties across Butler County. Keep your property looking pristine.",
     benefits: ["Residential mowing", "Commercial mowing", "Landscaping design", "Seasonal maintenance"] },
   { slug: "general-solutions", title: "General Property Maintenance", short: "Custom property improvement projects.", image: IMG.svcGeneral,
