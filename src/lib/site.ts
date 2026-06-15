@@ -1,10 +1,10 @@
 export const SITE = {
   name: "Blazin Property Solutions",
   short: "BPS",
-  tagline: "Fast. Clean. Dependable.",
+  tagline: "Your property, our priority.",
   phone: "316-500-0152",
   phoneHref: "tel:+13165000152",
-  area: "Butler County & Wichita, KS",
+  area: "Butler County & Rural Kansas",
   facebook: "https://www.facebook.com/profile.php?id=61575931196023",
 };
 
@@ -13,6 +13,7 @@ export const IMG = {
   truckTrailer: "/assets/truck-trailer.jpg",
   dumpLoad: "/assets/dump-load.jpg",
   trailerAlley: "/assets/trailer-alley.jpg",
+  yardCleanupBefore: "/assets/yard-cleanup-before.jpg",
   yardCleanup: "/assets/yard-cleanup.jpg",
   svcJunk: "/assets/svc-junk.jpg",
   svcTree: "/assets/svc-tree.jpg",
@@ -28,7 +29,7 @@ export const IMG = {
 
 export const SERVICES = [
   { slug: "junk-removal", title: "Junk Removal", short: "Residential and commercial cleanouts.", image: IMG.svcJunk,
-    desc: "Full-service junk hauling for homes, businesses, and construction sites across Wichita and Butler County. We load, haul, and dispose responsibly.",
+    desc: "Full-service junk hauling for homes, businesses, and construction sites across Butler County and rural Kansas. We load, haul, and dispose responsibly.",
     benefits: ["Same-day & next-day service", "Full-truck or partial loads", "Eco-friendly disposal", "We do the heavy lifting"] },
   { slug: "tree-trimming", title: "Tree Trimming", short: "Safe and professional tree maintenance.", image: IMG.svcTree,
     desc: "Professional trimming, limb removal, and storm cleanup. Keep your property safe and your trees healthy year-round.",
@@ -42,6 +43,9 @@ export const SERVICES = [
   { slug: "property-management", title: "Property Management", short: "Reliable property maintenance services.", image: IMG.svcPm,
     desc: "Ongoing maintenance for landlords, investors, and absentee owners — one call handles it all.",
     benefits: ["Turn-over cleanouts", "Lawn & exterior upkeep", "Repair coordination", "Reliable monthly service"] },
+  { slug: "landscaping-mowing", title: "Landscaping & Mowing", short: "Residential and commercial lawn maintenance.", image: IMG.svcGeneral,
+    desc: "Professional landscaping and mowing services for residential and commercial properties across Butler County. Keep your property looking pristine.",
+    benefits: ["Residential mowing", "Commercial mowing", "Landscaping design", "Seasonal maintenance"] },
   { slug: "general-solutions", title: "General Property Maintenance", short: "Custom property improvement projects.", image: IMG.svcGeneral,
     desc: "Odd jobs, hauling, light grading, and custom property work. If it needs doing, we'll get it done.",
     benefits: ["Custom scopes", "Hauling & disposal", "Light grading", "One-call convenience"] },

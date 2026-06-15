@@ -92,7 +92,7 @@ export function Footer() {
                 <div className="text-[10px] uppercase tracking-[0.3em] text-primary">Solutions</div>
               </div>
             </div>
-            <p className="mt-4 text-sm text-muted-foreground max-w-xs">{SITE.tagline} Local LLC serving {SITE.area}.</p>
+            <p className="mt-4 text-sm text-muted-foreground max-w-xs">{SITE.tagline} Local company serving {SITE.area}.</p>
           </div>
           <div>
             <h4 className="text-xs uppercase tracking-[0.25em] text-primary mb-4">Navigate</h4>
@@ -103,10 +103,11 @@ export function Footer() {
           <div>
             <h4 className="text-xs uppercase tracking-[0.25em] text-primary mb-4">Services</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>Junk Removal Wichita KS</li>
-              <li>Tree Trimming Wichita KS</li>
-              <li>Fence Installation Wichita KS</li>
+              <li>Junk Removal</li>
+              <li>Tree Trimming</li>
+              <li>Fence Installation</li>
               <li>Demolition Services</li>
+              <li>Landscaping & Mowing</li>
               <li>Property Management</li>
             </ul>
           </div>
@@ -121,8 +122,8 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-12 pt-6 border-t border-border/50 text-xs text-muted-foreground flex flex-wrap justify-between gap-2">
-          <div>© {new Date().getFullYear()} Blazin Property Solutions LLC. All rights reserved.</div>
-          <div>Fast. Clean. Dependable.</div>
+          <div>© {new Date().getFullYear()} Blazin Property Solutions. All rights reserved.</div>
+          <div>Your property, our priority.</div>
         </div>
       </div>
     </footer>

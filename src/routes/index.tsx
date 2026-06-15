@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { ArrowRight, Phone, Flame, MapPin, Clock, Building2, Zap } from "lucide-react";
 import { SITE, IMG, SERVICES, TESTIMONIALS } from "@/lib/site";
 import { Reveal, RevealGroup, RevealItem } from "@/components/reveal";
+import { BeforeAfter } from "@/components/before-after";
 
 export default function Home() {
   const ref = useRef<HTMLDivElement>(null);
@@ -45,7 +46,7 @@ export default function Home() {
               initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.9 }}
               className="mt-8 max-w-xl text-base sm:text-lg text-muted-foreground leading-relaxed"
             >
-              Serving Butler County & Wichita, Kansas with dependable property services — junk removal, fencing, demolition, tree trimming, property management, and more.
+              Serving Butler County and rural Kansas with dependable property services — junk removal, fencing, demolition, tree trimming, landscaping, mowing, property management, and more.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.1 }}
@@ -71,7 +72,7 @@ export default function Home() {
               <div className="absolute inset-0 mix-blend-overlay bg-gradient-to-br from-primary/30 via-transparent to-accent/30" />
               <div className="absolute bottom-6 left-6 right-6 glass-card rounded-2xl p-4">
                 <div className="text-[10px] uppercase tracking-[0.3em] text-primary">On the Job</div>
-                <div className="font-display text-lg mt-1">Wichita & Butler County</div>
+                <div className="font-display text-lg mt-1">Butler County & Surrounding Areas</div>
               </div>
             </div>
             <motion.div
@@ -90,7 +91,7 @@ export default function Home() {
         <RevealGroup className="mx-auto max-w-7xl grid grid-cols-2 md:grid-cols-4 gap-8">
           {[
             { icon: Zap, label: "Fast Response", value: "24/7" },
-            { icon: MapPin, label: "Local Kansas Co.", value: "BUT/SED" },
+            { icon: MapPin, label: "Serving Butler/Surrounding", value: "AREAS" },
             { icon: Clock, label: "Always Open", value: "365" },
             { icon: Building2, label: "Res & Commercial", value: "BOTH" },
           ].map(({ icon: Icon, label, value }) => (
@@ -108,9 +109,8 @@ export default function Home() {
         <div className="mx-auto max-w-7xl grid lg:grid-cols-2 gap-16 items-center">
           <Reveal>
             <div className="relative aspect-[4/5] overflow-hidden rounded-3xl">
-              <img src={IMG.yardCleanup} alt="Cleaned-up yard after Blazin Property Solutions service" className="absolute inset-0 h-full w-full object-cover hover:scale-105 transition-transform duration-[2s]" />
-              <div className="absolute inset-0 bg-gradient-to-tr from-background/70 to-transparent" />
-              <div className="absolute top-6 right-6 glass-card rounded-full px-4 py-2 text-xs uppercase tracking-widest">Before → After</div>
+              <BeforeAfter before={IMG.yardCleanupBefore} after={IMG.yardCleanup} alt="Yard cleanup transformation" />
+              <div className="absolute inset-0 bg-gradient-to-tr from-background/70 to-transparent pointer-events-none" />
             </div>
           </Reveal>
           <div>
@@ -122,9 +122,9 @@ export default function Home() {
             </Reveal>
             <Reveal delay={0.1}>
               <p className="mt-8 text-lg text-muted-foreground leading-relaxed">
-                🔥 A Local Limited Liability Company serving Butler County & Wichita, KS. Junk removal • Tree trimming • Fencing • Demolition • Property management & more.
+                🔥 A local company serving Butler County & rural Kansas. Junk removal • Tree trimming • Fencing • Demolition • Landscaping • Mowing • Property management & more.
               </p>
-              <p className="mt-4 font-display text-2xl text-fire-gradient">Fast. Clean. Dependable.</p>
+              <p className="mt-4 font-display text-2xl text-fire-gradient">Your property, our priority.</p>
             </Reveal>
             <RevealGroup className="mt-8 flex flex-wrap gap-2">
               {SERVICES.map((s) => (
@@ -264,7 +264,7 @@ export default function Home() {
             <div className="absolute inset-0 bg-fire-gradient opacity-10" />
             <div className="relative">
               <h2 className="font-display text-5xl sm:text-7xl">READY TO <span className="text-fire-gradient">IGNITE</span> YOUR PROJECT?</h2>
-              <p className="mt-6 text-muted-foreground max-w-xl mx-auto">Free on-site estimates. Same-day response across Wichita & Butler County.</p>
+              <p className="mt-6 text-muted-foreground max-w-xl mx-auto">Free on-site estimates. Same-day response across Butler County & surrounding areas.</p>
               <div className="mt-10 flex flex-wrap justify-center gap-4">
                 <Link to="/contact" className="rounded-full bg-fire-gradient px-7 py-4 text-sm font-bold uppercase tracking-widest text-white glow-flame">Get Estimate</Link>
                 <a href={SITE.phoneHref} className="rounded-full border border-border px-7 py-4 text-sm font-bold uppercase tracking-widest hover:border-primary">{SITE.phone}</a>
