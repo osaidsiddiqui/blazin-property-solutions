@@ -27,14 +27,8 @@ export default function About() {
           <p className="mt-10 text-lg text-muted-foreground max-w-2xl">A local company born in Kansas with one mission — make property work your way for every home and business we serve.</p>
         </Reveal>
 
-        <div className="mt-24 grid lg:grid-cols-2 gap-12 items-center">
+        <div className="mt-24">
           <Reveal>
-            <div className="relative aspect-[4/5] overflow-hidden rounded-3xl">
-              <img src={IMG.truckTrailer} alt="BPS truck and trailer" className="absolute inset-0 h-full w-full object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-tr from-background/70 to-transparent" />
-            </div>
-          </Reveal>
-          <Reveal delay={0.1}>
             <h2 className="font-display text-5xl sm:text-6xl">OUR <span className="text-fire-gradient">MISSION</span></h2>
             <p className="mt-6 text-muted-foreground leading-relaxed">Be the one call property owners in Butler County and rural Kansas make when their property needs work. Whether it's a single haul, a tree down after a storm, a fence install, landscaping, mowing, or ongoing rental upkeep — we show up, we work hard, and we leave it better than we found it.</p>
             <p className="mt-4 font-display text-3xl text-fire-gradient">Your property, our priority.</p>
