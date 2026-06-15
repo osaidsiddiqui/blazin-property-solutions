@@ -21,12 +21,15 @@ export const IMG = {
   svcDemo: "/assets/svc-demo.jpg",
   svcPm: "/assets/svc-pm.jpg",
   svcGeneral: "/assets/svc-general.jpg",
+  svcLandscaping: "https://cdn.builder.io/api/v1/image/assets%2Fac74af0e91684e859253068842865ac0%2F78b11b758cbc45bd99f8bccb5374a561?format=webp&width=800&height=1200",
+  svcSkidSteer: "https://cdn.builder.io/api/v1/image/assets%2Fac74af0e91684e859253068842865ac0%2F78e2d0e891254817bada4d55fcd18839?format=webp&width=800&height=1200",
   galleryTruckRoad: "/assets/gallery-truck-road.jpg",
   galleryHouseDebris: "/assets/gallery-house-debris.jpg",
   galleryShopHaul: "/assets/gallery-shop-haul.jpg",
   galleryFenceRepair: "/assets/gallery-fence-repair.jpg",
   deckRemoval: "/assets/deck-removal.jpg",
   treeRemoval: "/assets/tree-removal.jpg",
+  galleryJunkHaul: "https://cdn.builder.io/api/v1/image/assets%2Fac74af0e91684e859253068842865ac0%2Fa38ce6570d394194900aa39173c96c4e?format=webp&width=800&height=1200",
 };
 
 export const SERVICES = [
@@ -45,13 +48,13 @@ export const SERVICES = [
   { slug: "property-management", title: "Property Management", short: "Reliable property maintenance services.", image: IMG.svcPm,
     desc: "Ongoing maintenance for landlords, investors, and absentee owners — one call handles it all.",
     benefits: ["Turn-over cleanouts", "Lawn & exterior upkeep", "Repair coordination", "Reliable monthly service"] },
-  { slug: "landscaping-mowing", title: "Landscaping & Mowing", short: "Residential and commercial lawn maintenance.", image: IMG.svcGeneral,
+  { slug: "landscaping-mowing", title: "Landscaping & Mowing", short: "Residential and commercial lawn maintenance.", image: IMG.svcLandscaping,
     desc: "Professional landscaping and mowing services for residential and commercial properties across Butler County. Keep your property looking pristine.",
     benefits: ["Residential mowing", "Commercial mowing", "Landscaping design", "Seasonal maintenance"] },
   { slug: "general-solutions", title: "General Property Maintenance", short: "Custom property improvement projects.", image: IMG.svcGeneral,
     desc: "Odd jobs, hauling, light grading, and custom property work. If it needs doing, we'll get it done.",
     benefits: ["Custom scopes", "Hauling & disposal", "Light grading", "One-call convenience"] },
-  { slug: "skid-steer-services", title: "Skid Steer Services", short: "Land clearing, grading, and earthwork.", image: IMG.svcGeneral,
+  { slug: "skid-steer-services", title: "Skid Steer Services", short: "Land clearing, grading, and earthwork.", image: IMG.svcSkidSteer,
     desc: "Professional skid steer services for land clearing, grading, trenching, and earthwork across Butler County and surrounding areas.",
     benefits: ["Land clearing", "Grading & leveling", "Trenching", "Material moving"] },
 ] as const;

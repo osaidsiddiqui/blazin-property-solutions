@@ -105,14 +105,8 @@ export default function Home() {
 
       {/* ABOUT */}
       <section className="px-4 sm:px-6 lg:px-8 py-32">
-        <div className="mx-auto max-w-7xl grid lg:grid-cols-2 gap-16 items-center">
-          <Reveal>
-            <div className="relative aspect-[4/5] overflow-hidden rounded-3xl">
-              <img src={IMG.yardCleanup} alt="Cleaned-up yard after Blazin Property Solutions service" className="absolute inset-0 h-full w-full object-cover hover:scale-105 transition-transform duration-[2s]" />
-              <div className="absolute inset-0 bg-gradient-to-tr from-background/70 to-transparent" />
-            </div>
-          </Reveal>
-          <div>
+        <div className="mx-auto max-w-7xl">
+          <div className="text-center">
             <Reveal>
               <div className="text-[10px] uppercase tracking-[0.3em] text-primary mb-6">About BPS</div>
               <h2 className="font-display text-5xl sm:text-7xl leading-[0.9]">
@@ -120,12 +114,12 @@ export default function Home() {
               </h2>
             </Reveal>
             <Reveal delay={0.1}>
-              <p className="mt-8 text-lg text-muted-foreground leading-relaxed">
+              <p className="mt-8 text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
                 🔥 A local company serving Butler County & rural Kansas. Junk removal • Tree trimming • Fencing • Demolition • Landscaping • Mowing • Property management & more.
               </p>
               <p className="mt-4 font-display text-2xl text-fire-gradient">Your property, our priority.</p>
             </Reveal>
-            <RevealGroup className="mt-8 flex flex-wrap gap-2">
+            <RevealGroup className="mt-8 flex flex-wrap justify-center gap-2">
               {SERVICES.map((s) => (
                 <RevealItem key={s.slug}>
                   <Link to={`/services/${s.slug}`} className="inline-flex items-center rounded-full border border-border bg-card/50 px-4 py-2 text-xs uppercase tracking-widest hover:border-primary hover:text-primary transition-colors">
