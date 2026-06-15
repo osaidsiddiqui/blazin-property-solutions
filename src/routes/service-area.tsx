@@ -20,7 +20,7 @@ export default function ServiceArea() {
             <div className="relative glass-card rounded-3xl p-3 h-full min-h-[500px] overflow-hidden">
               <div className="relative w-full h-full min-h-[480px] rounded-2xl overflow-hidden border border-border/60">
                 <iframe
-                  title="Blazin Property Solutions Service Area — Wichita & Butler County, KS"
+                  title="Blazin Property Solutions Service Area — Butler County & Surrounding Areas, KS"
                   src="https://www.google.com/maps?q=Butler+County,+Kansas&z=9&output=embed"
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
