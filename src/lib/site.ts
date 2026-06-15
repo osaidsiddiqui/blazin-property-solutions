@@ -25,6 +25,8 @@ export const IMG = {
   galleryHouseDebris: "/assets/gallery-house-debris.jpg",
   galleryShopHaul: "/assets/gallery-shop-haul.jpg",
   galleryFenceRepair: "/assets/gallery-fence-repair.jpg",
+  deckRemoval: "/assets/deck-removal.jpg",
+  treeRemoval: "/assets/tree-removal.jpg",
 };
 
 export const SERVICES = [
@@ -49,6 +51,9 @@ export const SERVICES = [
   { slug: "general-solutions", title: "General Property Maintenance", short: "Custom property improvement projects.", image: IMG.svcGeneral,
     desc: "Odd jobs, hauling, light grading, and custom property work. If it needs doing, we'll get it done.",
     benefits: ["Custom scopes", "Hauling & disposal", "Light grading", "One-call convenience"] },
+  { slug: "skid-steer-services", title: "Skid Steer Services", short: "Land clearing, grading, and earthwork.", image: IMG.svcGeneral,
+    desc: "Professional skid steer services for land clearing, grading, trenching, and earthwork across Butler County and surrounding areas.",
+    benefits: ["Land clearing", "Grading & leveling", "Trenching", "Material moving"] },
 ] as const;
 
 export const TESTIMONIALS = [

@@ -90,7 +90,7 @@ export default function Home() {
         <RevealGroup className="mx-auto max-w-7xl grid grid-cols-2 md:grid-cols-4 gap-8">
           {[
             { icon: Zap, label: "Fast Response", value: "24/7" },
-            { icon: MapPin, label: "Serving Butler/Surrounding", value: "AREAS" },
+            { icon: MapPin, label: "Serving Butler County", value: "AREAS" },
             { icon: Clock, label: "Always Open", value: "365" },
             { icon: Building2, label: "Res & Commercial", value: "BOTH" },
           ].map(({ icon: Icon, label, value }) => (
@@ -175,22 +175,21 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FEATURED PROJECTS */}
+
+      {/* FEATURED WORK */}
       <section className="px-4 sm:px-6 lg:px-8 py-32">
         <div className="mx-auto max-w-7xl">
           <Reveal className="mb-16">
             <div className="text-[10px] uppercase tracking-[0.3em] text-primary mb-4">Recent Work</div>
-            <h2 className="font-display text-6xl sm:text-8xl leading-[0.9]">PROPERTY<br/><span className="text-fire-gradient">TRANSFORMATIONS</span></h2>
+            <h2 className="font-display text-6xl sm:text-8xl leading-[0.9]">OUR<br/><span className="text-fire-gradient">PROJECTS</span></h2>
           </Reveal>
-          <div className="grid md:grid-cols-12 gap-5">
+          <div className="grid md:grid-cols-2 gap-5">
             {[
-              { img: IMG.dumpLoad, title: "Full Junk Haul", tag: "Junk Removal", span: "md:col-span-7 aspect-[16/10]" },
-              { img: IMG.trailerAlley, title: "Alley Cleanout", tag: "Hauling", span: "md:col-span-5 aspect-[16/10]" },
-              { img: IMG.yardCleanup, title: "Yard Restoration", tag: "Property Mgmt", span: "md:col-span-5 aspect-[16/10]" },
-              { img: IMG.truckTrailer, title: "Heavy Equipment Move", tag: "General", span: "md:col-span-7 aspect-[16/10]" },
+              { img: IMG.svcDemo, title: "Demolition", tag: "Demolition" },
+              { img: "/assets/deck-removal.jpg", title: "Deck Removal", tag: "Demolition" },
             ].map((p, i) => (
-              <Reveal key={i} className={p.span} delay={i * 0.08}>
-                <div className="group relative h-full w-full overflow-hidden rounded-3xl">
+              <Reveal key={i} delay={i * 0.08}>
+                <div className="group relative aspect-[16/10] w-full overflow-hidden rounded-3xl">
                   <img src={p.img} alt={p.title} className="absolute inset-0 h-full w-full object-cover group-hover:scale-110 transition-transform duration-[1.5s]" />
                   <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
                   <div className="absolute inset-x-0 bottom-0 p-6 translate-y-2 group-hover:translate-y-0 transition-transform">
