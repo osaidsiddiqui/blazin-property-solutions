@@ -23,7 +23,7 @@ export default function Gallery() {
       <div className="mx-auto max-w-7xl">
         <Reveal className="mb-16 max-w-3xl">
           <div className="text-[10px] uppercase tracking-[0.3em] text-primary mb-4">Portfolio</div>
-          <h1 className="font-display text-6xl sm:text-8xl leading-[0.9]">PROPERTY <span className="text-fire-gradient">TRANSFORMATIONS</span></h1>
+          <h1 className="font-display text-5xl sm:text-7xl leading-[0.9]">PROPERTY <span className="text-fire-gradient">TRANSFORMATIONS</span></h1>
           <p className="mt-8 text-lg text-muted-foreground">Real projects. Real results. {SITE.area}.</p>
         </Reveal>
         <RevealGroup className="columns-1 sm:columns-2 lg:columns-3 gap-5 [column-fill:_balance]">
