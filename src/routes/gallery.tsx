@@ -13,7 +13,8 @@ const PROJECTS = [
   { img: IMG.yardCleanup, title: "Yard Restoration", tag: "Property Mgmt", h: "tall" },
   { img: IMG.dumpLoad, title: "Demolition Haul-Off", tag: "Demolition", h: "short" },
   { img: IMG.truckTrailer, title: "Ready for Pickup", tag: "Service Day", h: "tall" },
-  { img: IMG.yardCleanup, title: "Tree & Brush Cleanup", tag: "Tree Trimming", h: "short" },
+  { img: IMG.svcTree, title: "Tree Removal", tag: "Tree Trimming", h: "short" },
+  { img: IMG.treeRemoval, title: "Brush Cleanup", tag: "Tree Trimming", h: "short" },
 ];
 
 export default function Gallery() {

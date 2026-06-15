@@ -21,7 +21,7 @@ export default function ServiceArea() {
               <div className="relative w-full h-full min-h-[480px] rounded-2xl overflow-hidden border border-border/60">
                 <iframe
                   title="Blazin Property Solutions Service Area — Butler County & Surrounding Areas, KS"
-                  src="https://www.google.com/maps?q=Butler+County,+Kansas&z=9&output=embed"
+                  src="https://www.google.com/maps?q=Atlanta,+Kansas&z=8&output=embed"
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                   className="absolute inset-0 w-full h-full grayscale-[0.3] contrast-110 invert-[0.92] hue-rotate-180"
