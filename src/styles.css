@@ -152,15 +152,23 @@
 .elfsight-widget-wrapper {
   contain: layout style paint;
   overflow: hidden;
+  resize: none;
 }
 
 [class*="elfsight-app"] {
   display: block;
   width: 100%;
+  height: 100%;
 }
 
 [class*="elfsight-app"] iframe {
   display: block;
-  width: 100%;
+  width: 100% !important;
+  height: auto !important;
   border: none;
+}
+
+/* Suppress layout recalculations on Elfsight widget mutations */
+.glass-card[contains*="elfsight"] {
+  contain: content;
 }

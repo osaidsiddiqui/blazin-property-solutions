@@ -2,26 +2,34 @@ import { useEffect } from "react";
 
 export function ReviewsSection() {
   useEffect(() => {
-    // Load Elfsight platform script with error handling
-    const script = document.createElement("script");
-    script.src = "https://elfsightcdn.com/platform.js";
-    script.async = true;
-    script.onerror = () => console.warn("Failed to load Elfsight reviews");
+    // Suppress ResizeObserver warnings globally
+    const originalError = console.error;
+    console.error = function(...args) {
+      if (args[0]?.includes?.("ResizeObserver loop completed")) return;
+      if (args[0]?.includes?.("ResizeObserver")) return;
+      originalError.apply(console, args);
+    };
 
-    // Suppress ResizeObserver warnings
     const originalWarn = console.warn;
     console.warn = function(...args) {
       if (args[0]?.includes?.("ResizeObserver")) return;
       originalWarn.apply(console, args);
     };
 
-    document.body.appendChild(script);
+    // Load Elfsight platform script with error handling and delay
+    const timeoutId = setTimeout(() => {
+      const script = document.createElement("script");
+      script.src = "https://elfsightcdn.com/platform.js";
+      script.async = true;
+      script.defer = true;
+      script.onerror = () => console.warn("Failed to load Elfsight reviews");
+      document.body.appendChild(script);
+    }, 500);
 
     return () => {
+      clearTimeout(timeoutId);
+      console.error = originalError;
       console.warn = originalWarn;
-      if (document.body.contains(script)) {
-        document.body.removeChild(script);
-      }
     };
   }, []);
 
