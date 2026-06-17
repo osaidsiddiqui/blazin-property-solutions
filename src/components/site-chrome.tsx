@@ -117,7 +117,14 @@ export function Footer() {
               <li><a href={SITE.phoneHref} className="hover:text-foreground">{SITE.phone}</a></li>
               <li>{SITE.area}</li>
               <li>Always Open</li>
-              <li><a href={SITE.facebook} target="_blank" rel="noreferrer" className="hover:text-primary">Facebook</a></li>
+              <li className="flex gap-3 pt-2">
+                <a href={SITE.facebook} target="_blank" rel="noreferrer" aria-label="Facebook" className="hover:text-primary transition-colors">
+                  <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.87v-6.98H7.9V12h2.5V9.8c0-2.47 1.47-3.84 3.72-3.84 1.08 0 2.2.2 2.2.2v2.42h-1.24c-1.22 0-1.6.76-1.6 1.54V12h2.73l-.44 2.89h-2.29v6.98A10 10 0 0 0 22 12Z"/></svg>
+                </a>
+                <a href={SITE.instagram} target="_blank" rel="noreferrer" aria-label="Instagram" className="hover:text-primary transition-colors">
+                  <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" strokeWidth="2"/><path d="M12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8z" fill="none" stroke="currentColor" strokeWidth="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
+                </a>
+              </li>
             </ul>
           </div>
         </div>
