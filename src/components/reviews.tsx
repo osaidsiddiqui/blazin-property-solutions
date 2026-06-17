@@ -44,7 +44,7 @@ export function ReviewsSection() {
 
           {/* Facebook Reviews */}
           <div className="glass-card rounded-2xl p-8 overflow-hidden">
-            <h3 className="font-display text-2xl mb-6">Facebook Reviews</h3>
+            <h3 className="font-display text-2xl mb-6 text-white">Facebook Reviews</h3>
             <div className="elfsight-widget-wrapper min-h-96">
               <div className="elfsight-app-3bfdf3ae-25a5-472c-b167-0e103e005a42" data-elfsight-app-lazy></div>
             </div>
