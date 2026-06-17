@@ -1,0 +1,42 @@
+import { useEffect } from "react";
+
+export function ReviewsSection() {
+  useEffect(() => {
+    // Load Elfsight platform script
+    const script = document.createElement("script");
+    script.src = "https://elfsightcdn.com/platform.js";
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      if (document.body.contains(script)) {
+        document.body.removeChild(script);
+      }
+    };
+  }, []);
+
+  return (
+    <section className="px-4 sm:px-6 lg:px-8 py-32">
+      <div className="mx-auto max-w-7xl">
+        <div className="text-center mb-16">
+          <div className="text-[10px] uppercase tracking-[0.3em] text-primary mb-4">Reviews</div>
+          <h2 className="font-display text-6xl sm:text-8xl leading-[0.9]">WHAT CLIENTS<br/><span className="text-fire-gradient">SAY ABOUT US</span></h2>
+        </div>
+        
+        <div className="space-y-12">
+          {/* Google Reviews */}
+          <div className="glass-card rounded-2xl p-8 overflow-hidden">
+            <h3 className="font-display text-2xl mb-6">Google Reviews</h3>
+            <div className="elfsight-app-ce2188fc-e16e-4caa-b893-84989404fe1e" data-elfsight-app-lazy></div>
+          </div>
+
+          {/* Facebook Reviews */}
+          <div className="glass-card rounded-2xl p-8 overflow-hidden">
+            <h3 className="font-display text-2xl mb-6">Facebook Reviews</h3>
+            <div className="elfsight-app-3bfdf3ae-25a5-472c-b167-0e103e005a42" data-elfsight-app-lazy></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
