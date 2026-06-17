@@ -34,14 +34,6 @@ export function ReviewsSection() {
         </div>
 
         <div className="space-y-12">
-          {/* Google Reviews */}
-          <div className="glass-card rounded-2xl p-8 overflow-hidden">
-            <h3 className="font-display text-2xl mb-6">Google Reviews</h3>
-            <div className="elfsight-widget-wrapper min-h-96">
-              <div className="elfsight-app-ce2188fc-e16e-4caa-b893-84989404fe1e" data-elfsight-app-lazy></div>
-            </div>
-          </div>
-
           {/* Facebook Reviews */}
           <div className="glass-card rounded-2xl p-8 overflow-hidden">
             <h3 className="font-display text-2xl mb-6 text-white">Facebook Reviews</h3>
