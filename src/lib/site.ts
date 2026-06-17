@@ -5,7 +5,8 @@ export const SITE = {
   phone: "316-500-0152",
   phoneHref: "tel:+13165000152",
   area: "Butler County & Rural Kansas",
-  facebook: "https://www.facebook.com/profile.php?id=61575931196023",
+  facebook: "https://www.facebook.com/share/1Bn7UF2oGq/?mibextid=wwXIfr",
+  instagram: "https://www.instagram.com/blazinpropertysolutionsllc?igsh=bzB4NHNqdGhjMTh1",
 };
 
 export const IMG = {

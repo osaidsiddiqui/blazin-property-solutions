@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { ArrowRight, Phone, Flame, MapPin, Clock, Building2, Zap } from "lucide-react";
-import { SITE, IMG, SERVICES, TESTIMONIALS } from "@/lib/site";
+import { SITE, IMG, SERVICES } from "@/lib/site";
 import { Reveal, RevealGroup, RevealItem } from "@/components/reveal";
 
 export default function Home() {
@@ -191,30 +191,6 @@ export default function Home() {
                   <Flame className="h-6 w-6 text-primary mb-4 group-hover:scale-110 transition-transform" />
                   <h3 className="font-display text-3xl text-fire-gradient">{t}</h3>
                   <p className="mt-3 text-sm text-muted-foreground">{d}</p>
-                </div>
-              </RevealItem>
-            ))}
-          </RevealGroup>
-        </div>
-      </section>
-
-      {/* TESTIMONIALS */}
-      <section className="px-4 sm:px-6 lg:px-8 py-32">
-        <div className="mx-auto max-w-7xl">
-          <Reveal className="mb-16">
-            <div className="text-[10px] uppercase tracking-[0.3em] text-primary mb-4">Reviews</div>
-            <h2 className="font-display text-6xl sm:text-8xl leading-[0.9]">VOICES OF<br/><span className="text-fire-gradient">OUR CLIENTS</span></h2>
-          </Reveal>
-          <RevealGroup className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {TESTIMONIALS.map((t, i) => (
-              <RevealItem key={t.name}>
-                <div className={`glass-card rounded-2xl p-8 h-full ${i % 2 === 1 ? "md:translate-y-6" : ""}`}>
-                  <div className="text-primary mb-4">★★★★★</div>
-                  <p className="text-muted-foreground leading-relaxed">"{t.quote}"</p>
-                  <div className="mt-6 pt-6 border-t border-border/50">
-                    <div className="font-display tracking-wider">{t.name}</div>
-                    <div className="text-[10px] uppercase tracking-[0.3em] text-primary mt-1">Verified Client</div>
-                  </div>
                 </div>
               </RevealItem>
             ))}
