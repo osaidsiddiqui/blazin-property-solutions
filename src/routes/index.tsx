@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { ArrowRight, Phone, Flame, MapPin, Clock, Building2, Zap } from "lucide-react";
 import { SITE, IMG, SERVICES } from "@/lib/site";
 import { Reveal, RevealGroup, RevealItem } from "@/components/reveal";
+import { GoogleReviewsSection } from "@/components/google-reviews-section";
 import { ReviewsSection } from "@/components/reviews";
 
 export default function Home() {
@@ -199,7 +200,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* REVIEWS */}
+      {/* GOOGLE REVIEWS */}
+      <GoogleReviewsSection />
+
+      {/* FACEBOOK REVIEWS */}
       <ReviewsSection />
 
       {/* CTA */}
